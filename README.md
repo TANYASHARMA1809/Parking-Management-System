@@ -94,18 +94,13 @@ Before you begin, ensure you have the following installed:
 ### Technologies Used
 
 - Frontend:
-  - React: Frontend library for building user interfaces
-  - Redux: State management
-  - Axios: HTTP requests
-  - Socket.io: Real-time communication
+  - HTML,CSS
+  - Javascript
   - Bootstrap: CSS framework
   
 - Backend:
-  - Express: Web application framework
-  - Mongodb: NoSQL database
-  - Models- object modeling
-  - JWT: JSON Web Tokens for authentication
-  - Socket.io: Real-time communication
+  - Php
+  - Xmapp
 
 ### Deployment:
 - Render: Backend deployment

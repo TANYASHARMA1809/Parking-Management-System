@@ -46,7 +46,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
    bash
-   git clone https://github.com/your-username/Parking-Management-System.git
+   git clone https://github.com/TANYASHARMA1809/Parking-Management-System.git
    cd Parking-Management-System
    
 
@@ -54,15 +54,13 @@ Before you begin, ensure you have the following installed:
  
    bash
     cd backend
-    npm install
+  
    
-
 3. Install front dependencies:
 
    bash
     cd..
     cd frontend
-    npm install
    
 
 4. Start the development servers:

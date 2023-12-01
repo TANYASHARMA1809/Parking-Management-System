@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Registration form</title>
+
+    <style>
+        .container-fluid {
+            width: 600px;
+            border-radius: 1% 5% 1% 5%;
+            /*border: 2px solid;*/
+            border-color: rgb(221, 157, 168);
+            box-shadow: 1px 1px 5px 5px skyblue;
+            margin: auto;
+        }
+
+        body {
+            background-image: url("https://img.freepik.com/premium-photo/top-view-note-book-with-airplane-toy-pen-sky-blue-background-with-copy-space_43284-1044.jpg?size=626&ext=jpg&ga=GA1.2.202181420.1685344252&semt=ais");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        label {
+            margin-left: 1px;
+            margin-bottom: 1%;
+        }
+
+        input[type='radio'] {
+            margin-left: 5%;
+        }
+
+        .input-group input:focus {
+            outline: 0;
+        }
+
+        .input-group.success input {
+            border-color: #09c372;
+        }
+
+        .input-group.error input {
+            border-color: #ff3860;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="container col-lg-pull-5 mt-5">
+            <form action="./book.php" method="post" id="form">
+                <div class="text-center mt-3 mb-5">
+                    <h1>Book your Parking Slot</h1>
+                    <hr />
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mb-4 ">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
+                            <input type="text" class="form-control" id="fname" name="VehicleNumber"
+                                   placeholder="Vehicle Number" required>
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-sm-12 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-truck-plane"></i></span>
+                            <input type="text" class="form-control" id="lname" name="VehicleType" placeholder="Vehicle Type" required>
+                        </div>
+
+                    </div> -->
+                    <!-- <div id="msg" class="input-group mb-1 alert alert-danger"><span id="message"></span></div> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-truck-plane"></i></span>
+                            <input type="text" class="form-control" id="lname" name="VehicleType" placeholder="Vehicle Type" required>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" id="email" placeholder="Enter Owner Name" name="OwnerName" required>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-sm-6 mb-2">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            <input type="text" class="form-control" id="pwd"
+                                placeholder="Enter Contact Number" name="ContactNumber" required>
+                        </div>
+                    </div> -->
+                    <!-- <div id="msg2" class="input-group mb-1 alert alert-danger"><span id="message2"></span></div> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            <input type="text" class="form-control" id="pwd"
+                                placeholder="Enter Contact Number" name="ContactNumber" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-6">
+                        <label class="form-label">Entry Date: </label><br />
+                        <div class="input-group">
+
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" class="form-control" id="date" name="EntryDate">
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Exit Date: </label><br />
+                        <div class="input-group">
+
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" class="form-control" id="date" name="ExitDate">
+                        </div>
+
+
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-city"></i></span>
+                            <input type="text" class="form-control" id="phoneno"
+                                placeholder="Enter City Name" name="City" required>
+                        </div>
+                        <!-- <div class="input-group">
+                            <label for="selectSlot" class="input-group-text">Select Parking Slot</label>
+                            <select id="selectSlot" class="form-control"></select>
+                        </div> -->
+                    </div>
+                    <!-- <div class="col-sm-6 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="number" class="form-control" id="adharno" onkeyup="checkadhrno(this.value)"
+                                   onclick="checksum()" placeholder="Aadhar no" required>
+                        </div>
+
+                    </div> -->
+                    <!-- <div id="msg3" class="input-group mb-1 alert alert-danger"><span id="message3"></span></div> -->
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="text" id="gender" class="form-label">Gender</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-neuter"></i>
+                        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" onclick="checksum()"
+                                   name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                   onclick="checksum()" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                    </div> -->
+                    <!-- <div id="msg6" class="input-group mb-1 alert alert-danger"><span id="message6"></span></div> -->
+                <!-- </div> -->
+                <!-- <label>Room type:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-bed"></i></span>
+                    <select class="form-select" id="select" onclick="checksum()" onchange="checkDropdown(this.value)" required>
+                        <option value="">Select</option>
+                        <option value="luxury">luxury</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Bunkbed">Bunkbed</option>
+                    </select>
+                </div> -->
+                <!-- <div id="msg5" class="input-group mb-1 alert alert-danger"><span id="message5"></span></div> -->
+                <!-- <label>Entry Time: </label>
+                <div class="col-sm mb-4">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-stopwatch"></i></span>
+                        <input type="time" class="form-control" id="adharno" placeholder="Entry Time" name="Time">
+                    </div>
+                </div> -->
+                <!-- <div class="container">
+                    <div class="row mb-2 mt-3 text-left "> -->
+                        <!-- <div class="form-check mb-3 col-sm-4 ml-5">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember">
+                                Remember me
+                            </label>
+                        </div> -->
+                        <!-- <div class="form-check mb-3 col-sm-6 ml-5">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="terms"
+                                       required> I accept all terms and conditions.
+                            </label>
+                        </div> -->
+                    <!-- </div>
+                </div> -->
+                <div class="d-grid">
+                    <button type="submit" id="submit"
+                            class="btn btn-primary btn-block mb-3 ml-50">
+                        Book Now
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- <script src="~/Scripts/myJs.js"></script> -->
+    <script>
+        
+    </script>
+    
+</body>
+</html>

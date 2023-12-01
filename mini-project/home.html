@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PARKIFY</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="../logo.png" rel="icon">
+    <link href="../logo.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="banner">
+        <img src="./images/logo sepm.png" class="logo">
+        <div class="banner-text">
+            <h1>PARKIFY</h1>
+            <p>Life is a journey,but don't worry,you'll find a parking spot at the end</p>
+            <div class="banner-btn">
+                <a href="./book.html"><span></span>Book Now</a>
+                <a href="#feature"><span></span>Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#feature">FEATURES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="./book.html">Book Now</a></li>
+                <li><a href="./contactUs.html">Contact Us</a></li>
+                <li><a href="./exit.php">Parking Check Out</a></li>
+                <li><a href="./show.php">Booking Summary</a></li>
+                <li><a href="./index.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="./images/menu.png" id="menu">
+    </div>
+
+    <!--Features-->
+
+    <section id="feature">
+        <div class="title-text">
+            <p>Features</p>
+            <h1>Why Choose Us</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>Reliable parking</h1>
+                <div class="features-desc">
+                    <p>EAT, SLEEP, PARK, REPEAT! It's as easy as that at parkopedia. At Parkopedia, we pride ourselves
+                        on being the most reliable vehicle parking WebApp at no compromise of quality.</p>
+                </div>
+                <h1>Pre Booking Online</h1>
+                <div class="features-desc">
+                    <p>Being on-time and making your parking hassle-free is our priority! Book your parking slots and
+                        zones in advance with our pre-online booking system to ease your way in getting your parking
+                        spots without any sweat.</p>
+                </div>
+                <h1>Affordable Cost</h1>
+                <div class="features-desc">
+                    <p>Every single one of us deserves access to quality and standard parking. To get it at an
+                        affordable & cheap cost is an added bonus. We, at Parkopedia, are really happy and efficient to
+                        provide you the services of both.</p>
+                </div>
+            </div>
+            <div class="features-img">
+                <img src="images/pic-1.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!--Gallery-->
+
+    <section id="gallery">
+        <div class="title-text">
+            <p>GALLERY</p>
+            <h1>Some Parking Spots</h1>
+        </div>
+        <div class="gallery-box">
+            <div class="single-gallery">
+                <img src="images/pic-2.jpg">
+                <div class="overlay"></div>
+            </div>
+            <div class="single-gallery">
+                <img src="images/pic-3.jpg">
+                <div class="overlay"></div>
+            </div>
+            <div class="single-gallery">
+                <img src="images/pic-4.jpg">
+                <div class="overlay"></div>
+            </div>
+            <div class="single-gallery">
+                <img src="images/pic-5.jpg">
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/cancel.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

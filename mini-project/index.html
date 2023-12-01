@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login/Register - PARKIFY</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="logo.png" rel="icon">
+    <link href="logo.png" rel="apple-touch-icon">
+</head>
+
+<body>
+
+    <div class="hero">
+        <img class="logo" src="logo.png" alt="logo">
+        <p class="parkopedia">PARKIFY</p>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+            </div>
+            <form id="login" class="input-group" action="./login.php" method="post">
+                <input type="text" class="input-field" id="name" placeholder="User Name" name="username" required>
+                <input type="text" class="input-field" id="email" placeholder="Email Id" name="email" required>
+                <input type="password" class="input-field" id="password" placeholder="Password" name="password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <!-- <a onclick="LoginUser()" class="submit-btn">Log In</a> -->
+                <button class="submit-btn" onclick="LoginUser()">Log In</button>
+            </form>
+            <form id="register" class="input-group" action="./register.php" method="post">
+                <input type="text" class="input-field" id="sname" placeholder="User Name" name="username" required>
+                <input type="email" class="input-field" id="semail" placeholder="Email Id" name="semail" required>
+                <input type="password" class="input-field" id="spass" placeholder="Password" name="password" required>
+                <input type="checkbox" class="check-box" required><span>I agree to the terms and conditions</span>
+                <!-- <a onclick="performRegistration()"  class="submit-btn">Sign Up</a> -->
+                <button class="submit-btn" onclick="RegisterUser()">Sign Up</button>
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+
+        }
+        function RegisterUser() {
+            var email = document.getElementById('semail').value;
+            var password = document.getElementById('spass').value;
+            var user = document.getElementById('sname').value;
+        }
+
+        function LoginUser() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('name').value;
+        }
+
+    </script>
+
+</body>
+
+</html>

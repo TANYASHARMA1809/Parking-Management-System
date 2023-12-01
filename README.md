@@ -1,10 +1,10 @@
 # Parking-Management-System
 Project using HTML,CSS,JS and other backend stuff like Php
 # Ist-Mini-Project
-This is first mini project in which  a web based application named Parking Management System is created using  node.js, express.js, mongodb and react.js.
+This is first mini project in which  a web based application named Parking Management System is created using html,css,javascript and PHP.
 
 # Parking-Management-System
-Parking Management System is a web-based application that aims to simplify and optimize the parking experience for both users and administrators, and is built using node.js, express.js , mongodb and react.js. It will prioritize user convenience, effective space utilization and streamlined parking operations through an intuitive and user-friendly interface.
+Parking Management System is a web-based application that aims to simplify and optimize the parking experience for both users and administrators, and is built using html,css,javascript and PHP. It will prioritize user convenience, effective space utilization and streamlined parking operations through an intuitive and user-friendly interface.
 
 ## Table of Contents
 
@@ -24,12 +24,11 @@ Parking Management System is a web-based application that aims to simplify and o
 - [ ] User registration and authentication
 - [ ] Real-time parking spot availability status
 - [ ] Entry and Exit Management System
-- [ ] Payment gateway integration
 - [ ] Parking history and billing details
 - [ ] User friendly interface for Administrators and Users
 - [ ] Admin panel for managing parking spaces and user accounts
 - [ ] Analytics and insights to understand user engagement
-- [ ] Third-party API integration for enhanced functionality
+- [ ] Data Security Measures
 
 ## Getting Started
 
@@ -37,8 +36,7 @@ Parking Management System is a web-based application that aims to simplify and o
 
 Before you begin, ensure you have the following installed:
 
-- Node.js: [Download](https://nodejs.org/)
-- React.js: [Download](https://react.dev/)
+- Xampp: [Download](https://www.apachefriends.org/download.html)
 - Git (optional): [Download](https://git-scm.com/downloads)
 
 ### Installation
@@ -52,41 +50,35 @@ Before you begin, ensure you have the following installed:
 
 2. Install backend dependencies:
  
-   bash
-    cd backend
-  
+   xampp
+
+
+4. There will be server
+
+  xampp
    
-3. Install front dependencies:
-
-   bash
-    cd..
-    cd frontend
-   
-
-4. Start the development servers:
-   bash
-   THERE WILL BE TWO SERVERS RUNNING PARALLEL
-
-    front-end :- 
-    cd frontend
-    npm start
-
-    back-end :- 
-    cd backend 
-    npm start
-   
-5. Access the application in your browser at http://localhost:3000.
+5. Access the application in your browser by live server.
 
 ### Project Structure
-- frontend/: Frontend React application
-- backend/: Backend Express application
-  - routes/: API routes
-  - models/: models
-  - controllers/: Request handlers
-  - middlewares/: Custom middleware
-  - config/: Configuration files
-  - utils/: Utility functions
-  - public/: Static files for the frontend
+
+- images
+- html
+  - book.html
+  - contactUs.html
+  - home.html
+  - index.html
+  - thankyou.html
+- css
+  - contactUs.css
+  - home.css
+  - style.css
+- php
+  - book.php
+  - contactUs.php
+  - home.php 
+  - login.php
+  - exit.php 
+  - show.php   
  
   - 
 ### Technologies Used
@@ -101,7 +93,6 @@ Before you begin, ensure you have the following installed:
   - Xmapp
 
 ### Deployment:
-- Render: Backend deployment
 - Netlify: Frontend deployment
 
 ### Contributing

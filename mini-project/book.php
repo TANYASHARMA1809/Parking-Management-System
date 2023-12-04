@@ -49,7 +49,7 @@
         if ($stmt->execute()) {
             $conn->commit();
             echo '<script>alert("Your slot has been booked. Parking Slot: ' . $availableSlot . '");
-                window.location.href = "./show.php";</script>';
+                window.location.href = "./show1.php";</script>';
         } else {
             throw new Exception("Error booking slot. Please try again later.");
         }

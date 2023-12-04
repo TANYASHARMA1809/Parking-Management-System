@@ -213,11 +213,64 @@ $result = $conn->query($query);
         tr:nth-child(even) {
             background-color: rgba(255, 255, 255, 0.05);
         }
+        #sideNav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #c67ace;
+            z-index: 2;
+            transition: 0.5s;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 50px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #menuBtn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        #menuBtn img {
+            width: 20px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
 
 <h2>Payment/Bill</h2>
+<div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#feature">FEATURES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="./book.html">Book Now</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                    <li><a href="./exit.php">Parking Check Out</a></li>
+                    <li><a href="./show.php">Booking Summary</a></li>
+                    <li><a href="./index.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="./images/menu.png" id="menu">
+        </div>
 
 <table>
     <thead>
@@ -252,7 +305,23 @@ $result = $conn->query($query);
         <?php endwhile; ?>
     </tbody>
 </table>
+<script>
+    var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
 
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/cancel.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+</script>
 </body>
 </html>
 
@@ -260,9 +329,6 @@ $result = $conn->query($query);
 $conn->close();
 
 function calculateAmount($entryDate, $entryTime, $exitDate, $exitTime) {
-    // Add your logic to calculate the amount based on entry and exit details
-    // For example, you can calculate the duration and apply a rate
-    // return "$20"; // Replace with your calculated amount
     $entryTimestamp = strtotime("$entryDate $entryTime");
     $exitTimestamp = strtotime("$exitDate $exitTime");
 

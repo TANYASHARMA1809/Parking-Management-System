@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,10 @@
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <title>Registration form</title>
 
@@ -56,10 +57,65 @@
             font-family: 'Times New Roman', Times, serif;
             color: black;
         }
+
+        #sideNav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #c67ace;
+            z-index: 2;
+            transition: 0.5s;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 50px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #menuBtn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        #menuBtn img {
+            width: 20px;
+            margin-top: 15px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container-fluid mt-5">
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#feature">FEATURES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="./book.html">Book Now</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                    <li><a href="./exit.php">Parking Check Out</a></li>
+                    <li><a href="./show.php">Booking Summary</a></li>
+                    <li><a href="./index.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="./images/menu.png" id="menu">
+        </div>
         <div class="container col-lg-pull-5 mt-5">
             <form action="./book.php" method="post" id="form">
                 <div class="text-center mt-3 mb-5">
@@ -71,7 +127,7 @@
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                             <input type="text" class="form-control" id="fname" name="VehicleNumber"
-                                   placeholder="Vehicle Number" required>
+                                placeholder="Vehicle Number" required>
 
                         </div>
                     </div>
@@ -89,7 +145,8 @@
                     <div class="col-sm-12 mb-4">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-truck-plane"></i></span>
-                            <input type="text" class="form-control" id="lname" name="VehicleType" placeholder="Vehicle Type" required>
+                            <input type="text" class="form-control" id="lname" name="VehicleType"
+                                placeholder="Vehicle Type" required>
                         </div>
 
                     </div>
@@ -100,7 +157,8 @@
                     <div class="col-sm-12 mb-4">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-sharp fa-solid fa-user"></i></span>
-                            <input type="text" class="form-control" id="email" placeholder="Enter Owner Name" name="OwnerName" required>
+                            <input type="text" class="form-control" id="email" placeholder="Enter Owner Name"
+                                name="OwnerName" required>
                         </div>
                     </div>
 
@@ -117,8 +175,8 @@
                     <div class="col-sm-12 mb-4">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                            <input type="text" class="form-control" id="pwd"
-                                placeholder="Enter Contact Number" name="ContactNumber" required>
+                            <input type="text" class="form-control" id="pwd" placeholder="Enter Contact Number"
+                                name="ContactNumber" required>
                         </div>
                     </div>
                 </div>
@@ -148,8 +206,8 @@
                     <div class="col-sm-12 mb-4">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-city"></i></span>
-                            <input type="text" class="form-control" id="phoneno"
-                                placeholder="Enter City Name" name="City" required>
+                            <input type="text" class="form-control" id="phoneno" placeholder="Enter City Name"
+                                name="City" required>
                         </div>
                         <!-- <div class="input-group">
                             <label for="selectSlot" class="input-group-text">Select Parking Slot</label>
@@ -184,7 +242,7 @@
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                     </div> -->
-                    <!-- <div id="msg6" class="input-group mb-1 alert alert-danger"><span id="message6"></span></div> -->
+                <!-- <div id="msg6" class="input-group mb-1 alert alert-danger"><span id="message6"></span></div> -->
                 <!-- </div> -->
                 <!-- <label>Room type:</label>
                 <div class="input-group">
@@ -207,23 +265,22 @@
                 </div> -->
                 <!-- <div class="container">
                     <div class="row mb-2 mt-3 text-left "> -->
-                        <!-- <div class="form-check mb-3 col-sm-4 ml-5">
+                <!-- <div class="form-check mb-3 col-sm-4 ml-5">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox" name="remember">
                                 Remember me
                             </label>
                         </div> -->
-                        <!-- <div class="form-check mb-3 col-sm-6 ml-5">
+                <!-- <div class="form-check mb-3 col-sm-6 ml-5">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox" name="terms"
                                        required> I accept all terms and conditions.
                             </label>
                         </div> -->
-                    <!-- </div>
+                <!-- </div>
                 </div> -->
                 <div class="d-grid">
-                    <button type="submit" id="submit"
-                            class="btn btn-primary btn-block mb-3 ml-50">
+                    <button type="submit" id="submit" class="btn btn-primary btn-block mb-3 ml-50">
                         Book Now
                     </button>
                 </div>
@@ -233,8 +290,23 @@
     </div>
     <!-- <script src="~/Scripts/myJs.js"></script> -->
     <script>
-        
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/cancel.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
     </script>
-    
+
 </body>
+
 </html>

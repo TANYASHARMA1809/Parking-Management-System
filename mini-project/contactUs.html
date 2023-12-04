@@ -11,6 +11,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        #sideNav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #c67ace;
+            z-index: 2;
+            transition: 0.5s;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 50px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #menuBtn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        #menuBtn img {
+            width: 20px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,6 +58,23 @@
     <div class="contactUs" action="/contact">
         <div class="title">
             <h2>Contact Us</h2>
+        </div>
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#feature">FEATURES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="./book.html">Book Now</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                    <li><a href="./exit.php">Parking Check Out</a></li>
+                    <li><a href="./show.php">Booking Summary</a></li>
+                    <li><a href="./index.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="./images/menu.png" id="menu">
         </div>
         <div class="box">
             <div class="contact form">
@@ -93,6 +148,21 @@
         </div>
     </div>
     <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/cancel.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
         var fnameError = document.getElementById("fnameError");
         var lnameError = document.getElementById("lnameError");
         var phoneError = document.getElementById("phoneError");
